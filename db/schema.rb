@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20131128235052) do
 
   create_table "aircraft_documents", force: true do |t|
@@ -171,6 +172,9 @@ ActiveRecord::Schema.define(version: 20131128235052) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+=======
+ActiveRecord::Schema.define(version: 20131126093828) do
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 
   create_table "users", force: true do |t|
     t.string   "name"
@@ -179,7 +183,10 @@ ActiveRecord::Schema.define(version: 20131128235052) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
+<<<<<<< HEAD
     t.boolean  "admin"
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

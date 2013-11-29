@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+<<<<<<< HEAD
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
@@ -14,6 +15,17 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
+=======
+before_save { self.email = email.downcase }
+before_create :create_remember_token
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence:   true,
+                    format:     { with: VALID_EMAIL_REGEX },
+                    uniqueness: { case_sensitive: false }
+ 
+  validates :password, length: { minimum: 4 }
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
@@ -23,6 +35,7 @@ class User < ActiveRecord::Base
     Digest::SHA1.hexdigest(token.to_s)
   end
 
+<<<<<<< HEAD
   def feed
     Micropost.from_users_followed_by(self)
   end
@@ -39,6 +52,8 @@ class User < ActiveRecord::Base
     relationships.find_by(followed_id: other_user.id).destroy!
   end
 
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
   private
 
     def create_remember_token

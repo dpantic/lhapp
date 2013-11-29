@@ -9,4 +9,8 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5

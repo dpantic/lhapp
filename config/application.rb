@@ -7,10 +7,18 @@ require "action_mailer/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+<<<<<<< HEAD
 # Assets should be precompiled for production (so we don't need the gems loaded then)
 Bundler.require(*Rails.groups(assets: %w(development test)))
 
 module SampleApp
+=======
+# Require the gems listed in Gemfile, including any gems
+# you've limited to :test, :development, or :production.
+Bundler.require(:default, Rails.env)
+
+module Lhapp
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -23,7 +31,10 @@ module SampleApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 SampleApp::Application.configure do
+=======
+Lhapp::Application.configure do
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
@@ -13,7 +17,11 @@ SampleApp::Application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
+<<<<<<< HEAD
   config.serve_static_assets = true
+=======
+  config.serve_static_assets  = true
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
   config.static_cache_control = "public, max-age=3600"
 
   # Show full error reports and disable caching.
@@ -33,7 +41,10 @@ SampleApp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+<<<<<<< HEAD
 
   # Speed up tests by lowering bcrypt's cost function.
   ActiveModel::SecurePassword.min_cost = true
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 end

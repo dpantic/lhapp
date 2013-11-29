@@ -4,6 +4,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.1'
 gem 'bootstrap-sass', '2.3.2.0'
+<<<<<<< HEAD
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
@@ -14,6 +15,12 @@ gem "less-rails"
 gem 'smarter_csv'
 gem 'roo'
 gem 'iconv'
+=======
+gem 'bcrypt-ruby', '3.0.1'
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
@@ -22,7 +29,11 @@ group :development, :test do
   gem 'guard-rspec', '2.5.0'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
+<<<<<<< HEAD
   gem 'childprocess', '0.3.6'
+=======
+  gem 'childprocess', '0.3.9'
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 end
 
 group :test do
@@ -46,8 +57,12 @@ end
 
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '2.1.1'
+<<<<<<< HEAD
 gem 'coffee-rails', '4.0.0'
 
+=======
+gem 'coffee-rails', '4.0.1'
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 gem 'jquery-rails', '3.0.4'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
@@ -59,4 +74,9 @@ end
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+<<<<<<< HEAD
 end
+=======
+  gem 'thin'
+end
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5

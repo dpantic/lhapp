@@ -9,7 +9,10 @@ $grayMediumLight: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 /* universal */
 
 html {
@@ -114,7 +117,13 @@ footer {
   float: left;
   width: 100%;
   margin-top: 45px;
+<<<<<<< HEAD
   @include box_sizing;
+=======
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 }
 
 /* sidebar */
@@ -147,6 +156,7 @@ aside {
   margin-right: 10px;
 }
 
+<<<<<<< HEAD
 .stats {
   overflow: auto;
   a {
@@ -176,6 +186,8 @@ aside {
   }
 }
 
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -200,6 +212,7 @@ input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+<<<<<<< HEAD
 }
 
 /* Users index */
@@ -243,4 +256,6 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+=======
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 }

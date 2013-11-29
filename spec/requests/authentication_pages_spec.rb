@@ -1,6 +1,17 @@
 require 'spec_helper'
 
+<<<<<<< HEAD
 describe "Authentication" do
+=======
+describe "AuthenticationPages" do
+  describe "GET /authentication_pages" do
+    it "works! (now write some real specs)" do
+      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
+      get authentication_pages_index_path
+      response.status.should be(200)
+    end
+  end
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
 
   subject { page }
 
@@ -10,6 +21,7 @@ describe "Authentication" do
     it { should have_content('Sign in') }
     it { should have_title('Sign in') }
   end
+<<<<<<< HEAD
 
   describe "signin" do
     before { visit signin_path }
@@ -153,3 +165,8 @@ describe "Authentication" do
     end
   end
 end
+=======
+end
+
+end
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5

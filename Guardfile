@@ -1,5 +1,6 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
+<<<<<<< HEAD
 require 'active_support/inflector'
 
 guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' }, 
@@ -16,6 +17,10 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' },
 end
 
 guard 'rspec', all_after_pass: false, cli: '--drb' do
+=======
+
+guard 'rspec' do
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
   watch('spec/spec_helper.rb')  { "spec" }
@@ -34,6 +39,7 @@ guard 'rspec', all_after_pass: false, cli: '--drb' do
   # Turnip features and steps
   watch(%r{^spec/acceptance/(.+)\.feature$})
   watch(%r{^spec/acceptance/steps/(.+)_steps\.rb$})   { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'spec/acceptance' }
+<<<<<<< HEAD
 
   # Custom Rails Tutorial specs
   watch(%r{^app/controllers/(.+)_(controller)\.rb$})  do |m|
@@ -51,3 +57,7 @@ guard 'rspec', all_after_pass: false, cli: '--drb' do
     "spec/requests/authentication_pages_spec.rb"                                                                                                               
   end
 end
+=======
+end
+
+>>>>>>> 6f2a9d9b68c988ed496642a8770928cffa6476e5
