@@ -1,0 +1,29 @@
+<h1>Listing smp_referenzs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Spm ref</th>
+      <th>Bauteil</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @smp_referenzs.each do |smp_referenz| %>
+      <tr>
+        <td><%= smp_referenz.spm_ref %></td>
+        <td><%= smp_referenz.bauteil %></td>
+        <td><%= link_to 'Show', smp_referenz %></td>
+        <td><%= link_to 'Edit', edit_smp_referenz_path(smp_referenz) %></td>
+        <td><%= link_to 'Destroy', smp_referenz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Smp referenz', new_smp_referenz_path %>

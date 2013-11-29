@@ -1,0 +1,2 @@
+module IpcSeatsHelper
+end

@@ -1,0 +1,2 @@
+module AmmsHelper
+end

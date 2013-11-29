@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @ipc_seat.manufacturer %>
+</p>
+
+<p>
+  <strong>Modell series:</strong>
+  <%= @ipc_seat.modell_series %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ipc_seat.description %>
+</p>
+
+<p>
+  <strong>Add infos:</strong>
+  <%= @ipc_seat.add_infos %>
+</p>
+
+<p>
+  <strong>Part number:</strong>
+  <%= @ipc_seat.part_number %>
+</p>
+
+<p>
+  <strong>Add material info:</strong>
+  <%= @ipc_seat.add_material_info %>
+</p>
+
+<p>
+  <strong>Cmm:</strong>
+  <%= @ipc_seat.cmm %>
+</p>
+
+<%= link_to 'Edit', edit_ipc_seat_path(@ipc_seat) %> |
+<%= link_to 'Back', ipc_seats_path %>

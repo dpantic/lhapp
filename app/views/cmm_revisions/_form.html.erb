@@ -1,0 +1,57 @@
+<%= form_for(@cmm_revision) do |f| %>
+  <% if @cmm_revision.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cmm_revision.errors.count, "error") %> prohibited this cmm_revision from being saved:</h2>
+
+      <ul>
+      <% @cmm_revision.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ac_type %><br>
+    <%= f.text_field :ac_type %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :part_number %><br>
+    <%= f.text_field :part_number %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :cmm %><br>
+    <%= f.text_field :cmm %>
+  </div>
+  <div class="field">
+    <%= f.label :revision_date %><br>
+    <%= f.text_field :revision_date %>
+  </div>
+  <div class="field">
+    <%= f.label :issue %><br>
+    <%= f.text_field :issue %>
+  </div>
+  <div class="field">
+    <%= f.label :rev_checked %><br>
+    <%= f.text_field :rev_checked %>
+  </div>
+  <div class="field">
+    <%= f.label :not_in_use %><br>
+    <%= f.text_field :not_in_use %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

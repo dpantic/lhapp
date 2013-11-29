@@ -1,0 +1,2 @@
+module SmpReferenzsHelper
+end

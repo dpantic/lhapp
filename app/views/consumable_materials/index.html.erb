@@ -1,0 +1,35 @@
+<h1>Listing consumable_materials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product type</th>
+      <th>Description</th>
+      <th>Add infos</th>
+      <th>Mat nr</th>
+      <th>Part number</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consumable_materials.each do |consumable_material| %>
+      <tr>
+        <td><%= consumable_material.product_type %></td>
+        <td><%= consumable_material.description %></td>
+        <td><%= consumable_material.add_infos %></td>
+        <td><%= consumable_material.mat_nr %></td>
+        <td><%= consumable_material.part_number %></td>
+        <td><%= link_to 'Show', consumable_material %></td>
+        <td><%= link_to 'Edit', edit_consumable_material_path(consumable_material) %></td>
+        <td><%= link_to 'Destroy', consumable_material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consumable material', new_consumable_material_path %>

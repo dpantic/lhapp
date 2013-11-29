@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ac type:</strong>
+  <%= @cmm_revision.ac_type %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @cmm_revision.type %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @cmm_revision.manufacturer %>
+</p>
+
+<p>
+  <strong>Part number:</strong>
+  <%= @cmm_revision.part_number %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @cmm_revision.model %>
+</p>
+
+<p>
+  <strong>Cmm:</strong>
+  <%= @cmm_revision.cmm %>
+</p>
+
+<p>
+  <strong>Revision date:</strong>
+  <%= @cmm_revision.revision_date %>
+</p>
+
+<p>
+  <strong>Issue:</strong>
+  <%= @cmm_revision.issue %>
+</p>
+
+<p>
+  <strong>Rev checked:</strong>
+  <%= @cmm_revision.rev_checked %>
+</p>
+
+<p>
+  <strong>Not in use:</strong>
+  <%= @cmm_revision.not_in_use %>
+</p>
+
+<%= link_to 'Edit', edit_cmm_revision_path(@cmm_revision) %> |
+<%= link_to 'Back', cmm_revisions_path %>

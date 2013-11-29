@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product type:</strong>
+  <%= @consumable_material.product_type %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @consumable_material.description %>
+</p>
+
+<p>
+  <strong>Add infos:</strong>
+  <%= @consumable_material.add_infos %>
+</p>
+
+<p>
+  <strong>Mat nr:</strong>
+  <%= @consumable_material.mat_nr %>
+</p>
+
+<p>
+  <strong>Part number:</strong>
+  <%= @consumable_material.part_number %>
+</p>
+
+<%= link_to 'Edit', edit_consumable_material_path(@consumable_material) %> |
+<%= link_to 'Back', consumable_materials_path %>

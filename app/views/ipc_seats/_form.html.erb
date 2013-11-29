@@ -1,0 +1,45 @@
+<%= form_for(@ipc_seat) do |f| %>
+  <% if @ipc_seat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ipc_seat.errors.count, "error") %> prohibited this ipc_seat from being saved:</h2>
+
+      <ul>
+      <% @ipc_seat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :manufacturer %><br>
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%= f.label :modell_series %><br>
+    <%= f.text_field :modell_series %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :add_infos %><br>
+    <%= f.text_field :add_infos %>
+  </div>
+  <div class="field">
+    <%= f.label :part_number %><br>
+    <%= f.text_field :part_number %>
+  </div>
+  <div class="field">
+    <%= f.label :add_material_info %><br>
+    <%= f.text_field :add_material_info %>
+  </div>
+  <div class="field">
+    <%= f.label :cmm %><br>
+    <%= f.text_field :cmm %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

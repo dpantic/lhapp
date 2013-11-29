@@ -1,0 +1,39 @@
+<h1>Listing ipc_all_acs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>System</th>
+      <th>Description</th>
+      <th>Add infos</th>
+      <th>Part number</th>
+      <th>Mat nr</th>
+      <th>Add material info</th>
+      <th>Info</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipc_all_acs.each do |ipc_all_ac| %>
+      <tr>
+        <td><%= ipc_all_ac.system %></td>
+        <td><%= ipc_all_ac.description %></td>
+        <td><%= ipc_all_ac.add_infos %></td>
+        <td><%= ipc_all_ac.part_number %></td>
+        <td><%= ipc_all_ac.mat_nr %></td>
+        <td><%= ipc_all_ac.add_material_info %></td>
+        <td><%= ipc_all_ac.info %></td>
+        <td><%= link_to 'Show', ipc_all_ac %></td>
+        <td><%= link_to 'Edit', edit_ipc_all_ac_path(ipc_all_ac) %></td>
+        <td><%= link_to 'Destroy', ipc_all_ac, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ipc all ac', new_ipc_all_ac_path %>

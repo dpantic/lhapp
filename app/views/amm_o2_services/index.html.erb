@@ -1,0 +1,35 @@
+<h1>Listing amm_o2_services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ac type</th>
+      <th>Operator</th>
+      <th>System</th>
+      <th>Job</th>
+      <th>Amm referenz</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @amm_o2_services.each do |amm_o2_service| %>
+      <tr>
+        <td><%= amm_o2_service.ac_type %></td>
+        <td><%= amm_o2_service.operator %></td>
+        <td><%= amm_o2_service.system %></td>
+        <td><%= amm_o2_service.job %></td>
+        <td><%= amm_o2_service.amm_referenz %></td>
+        <td><%= link_to 'Show', amm_o2_service %></td>
+        <td><%= link_to 'Edit', edit_amm_o2_service_path(amm_o2_service) %></td>
+        <td><%= link_to 'Destroy', amm_o2_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Amm o2 service', new_amm_o2_service_path %>

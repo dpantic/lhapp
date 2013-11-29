@@ -1,0 +1,37 @@
+<%= form_for(@consumable_material) do |f| %>
+  <% if @consumable_material.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@consumable_material.errors.count, "error") %> prohibited this consumable_material from being saved:</h2>
+
+      <ul>
+      <% @consumable_material.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_type %><br>
+    <%= f.text_field :product_type %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :add_infos %><br>
+    <%= f.text_field :add_infos %>
+  </div>
+  <div class="field">
+    <%= f.label :mat_nr %><br>
+    <%= f.text_field :mat_nr %>
+  </div>
+  <div class="field">
+    <%= f.label :part_number %><br>
+    <%= f.text_field :part_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

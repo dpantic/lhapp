@@ -1,0 +1,39 @@
+<h1>Listing ipc_seats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer</th>
+      <th>Modell series</th>
+      <th>Description</th>
+      <th>Add infos</th>
+      <th>Part number</th>
+      <th>Add material info</th>
+      <th>Cmm</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ipc_seats.each do |ipc_seat| %>
+      <tr>
+        <td><%= ipc_seat.manufacturer %></td>
+        <td><%= ipc_seat.modell_series %></td>
+        <td><%= ipc_seat.description %></td>
+        <td><%= ipc_seat.add_infos %></td>
+        <td><%= ipc_seat.part_number %></td>
+        <td><%= ipc_seat.add_material_info %></td>
+        <td><%= ipc_seat.cmm %></td>
+        <td><%= link_to 'Show', ipc_seat %></td>
+        <td><%= link_to 'Edit', edit_ipc_seat_path(ipc_seat) %></td>
+        <td><%= link_to 'Destroy', ipc_seat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ipc seat', new_ipc_seat_path %>

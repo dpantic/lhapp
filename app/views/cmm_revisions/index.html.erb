@@ -1,0 +1,45 @@
+<h1>Listing cmm_revisions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ac type</th>
+      <th>Type</th>
+      <th>Manufacturer</th>
+      <th>Part number</th>
+      <th>Model</th>
+      <th>Cmm</th>
+      <th>Revision date</th>
+      <th>Issue</th>
+      <th>Rev checked</th>
+      <th>Not in use</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cmm_revisions.each do |cmm_revision| %>
+      <tr>
+        <td><%= cmm_revision.ac_type %></td>
+        <td><%= cmm_revision.type %></td>
+        <td><%= cmm_revision.manufacturer %></td>
+        <td><%= cmm_revision.part_number %></td>
+        <td><%= cmm_revision.model %></td>
+        <td><%= cmm_revision.cmm %></td>
+        <td><%= cmm_revision.revision_date %></td>
+        <td><%= cmm_revision.issue %></td>
+        <td><%= cmm_revision.rev_checked %></td>
+        <td><%= cmm_revision.not_in_use %></td>
+        <td><%= link_to 'Show', cmm_revision %></td>
+        <td><%= link_to 'Edit', edit_cmm_revision_path(cmm_revision) %></td>
+        <td><%= link_to 'Destroy', cmm_revision, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cmm revision', new_cmm_revision_path %>

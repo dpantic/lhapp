@@ -1,0 +1,38 @@
+<% provide(:title, 'IPC-Data') %>
+<h1>IPC data</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+   <%= form_for(:ipc_catalog) do |f| %>
+
+      <%#= render 'shared/error_messages', object: f.object %>
+      
+      <%= f.label :Ata %>
+      <%= f.text_field :ATA %>
+
+      <%= f.label :System %>
+      <%= f.text_field :System %>
+
+      <%= f.label :Bezeichnung %>
+      <%= f.text_field :Bezeichnung %>
+
+      <%= f.label :Fin %>
+      <%= f.text_field :Fin %>
+
+	  <%= f.label :Add_infos %>
+      <%= f.text_field :Add_infos %>
+
+      <%= f.label :Part_Number %>
+      <%= f.text_field :Part_Number %>
+
+      <%= f.label :ipc_chapter %>
+      <%= f.text_field :ipc_chapter %>
+
+      <%= f.label :main_topic %>
+      <%= f.text_field :main_topic %>
+
+
+      <%= f.submit "Create my IPC-Data", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

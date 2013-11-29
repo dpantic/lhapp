@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Operator:</strong>
+  <%= @aircraft_document.operator %>
+</p>
+
+<p>
+  <strong>Ac type:</strong>
+  <%= @aircraft_document.ac_type %>
+</p>
+
+<p>
+  <strong>Document:</strong>
+  <%= @aircraft_document.document %>
+</p>
+
+<p>
+  <strong>Revision:</strong>
+  <%= @aircraft_document.revision %>
+</p>
+
+<p>
+  <strong>Rev checked:</strong>
+  <%= @aircraft_document.rev_checked %>
+</p>
+
+<%= link_to 'Edit', edit_aircraft_document_path(@aircraft_document) %> |
+<%= link_to 'Back', aircraft_documents_path %>

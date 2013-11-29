@@ -1,0 +1,32 @@
+<%= form_for @amm, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :ac_type, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ac_type, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :mm_referenz, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :mm_referenz, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :bauteil, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :bauteil, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :eff, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :eff, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                amms_path, :class => 'btn' %>
+  </div>
+<% end %>

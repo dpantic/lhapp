@@ -1,0 +1,35 @@
+<h1>Listing aircraft_documents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Ac type</th>
+      <th>Document</th>
+      <th>Revision</th>
+      <th>Rev checked</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @aircraft_documents.each do |aircraft_document| %>
+      <tr>
+        <td><%= aircraft_document.operator %></td>
+        <td><%= aircraft_document.ac_type %></td>
+        <td><%= aircraft_document.document %></td>
+        <td><%= aircraft_document.revision %></td>
+        <td><%= aircraft_document.rev_checked %></td>
+        <td><%= link_to 'Show', aircraft_document %></td>
+        <td><%= link_to 'Edit', edit_aircraft_document_path(aircraft_document) %></td>
+        <td><%= link_to 'Destroy', aircraft_document, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Aircraft document', new_aircraft_document_path %>

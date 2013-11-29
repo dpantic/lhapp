@@ -1,0 +1,25 @@
+<%= form_for(@smp_referenz) do |f| %>
+  <% if @smp_referenz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@smp_referenz.errors.count, "error") %> prohibited this smp_referenz from being saved:</h2>
+
+      <ul>
+      <% @smp_referenz.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :spm_ref %><br>
+    <%= f.text_field :spm_ref %>
+  </div>
+  <div class="field">
+    <%= f.label :bauteil %><br>
+    <%= f.text_field :bauteil %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
